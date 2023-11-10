@@ -17,8 +17,6 @@ for subject in subjects:
     total_lessons = 0
     for lesson in lesson_info:
         lesson_details = lesson.split("(")
-        for i in range(len(lesson_details) + 1):
-            lesson_details[i - 1] = lesson_details[i - 1].replace(" ", "")
         total_lessons += int(lesson_details[0])
     subject_dict[subject_name] = total_lessons
 
